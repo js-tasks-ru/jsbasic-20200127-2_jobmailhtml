@@ -16,6 +16,10 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
+  let x = name.length;
+  if (x > 3) {
+    return x;
+  }
 }
 
 /**
@@ -33,5 +37,3 @@ function sayHello() {
 
 sayHello('user');
 ```
-
-
