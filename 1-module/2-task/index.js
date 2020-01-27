@@ -10,6 +10,18 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
+  // let x = name.length;
+  // if (x < 4 || x == 0 || name.includes(" ")) {
+  //   return false;
+  // } else {
+  //   return true;
+  // }
+  let x = String(name);
+  if (x.length < 4 || name === undefined ||  x.includes(" ")) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 function sayHello() {
