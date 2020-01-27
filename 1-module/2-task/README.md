@@ -15,8 +15,8 @@ function print(text) {
  * Эту функцию нужно поменять так,
  * чтобы функция sayHello работала корректно
  */
- function isValid(name) {
- }
+function isValid(name) {
+}
 
 /**
  * Эту функцию трогать не нужно
@@ -33,3 +33,5 @@ function sayHello() {
 
 sayHello('user');
 ```
+
+
