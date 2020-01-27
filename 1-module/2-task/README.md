@@ -15,12 +15,8 @@ function print(text) {
  * Эту функцию нужно поменять так,
  * чтобы функция sayHello работала корректно
  */
-function isValid(name) {
-  let x = name.length;
-  if (x > 3) {
-    return x;
-  }
-}
+ function isValid(name) {
+ }
 
 /**
  * Эту функцию трогать не нужно
