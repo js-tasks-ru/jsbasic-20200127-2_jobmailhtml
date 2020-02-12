@@ -13,5 +13,7 @@ function makeFriendsList(friends) {
     fragment.append(li);
   }
 
-  return node.append(fragment);
+  node.append(fragment);
+
+  return node;
 }
