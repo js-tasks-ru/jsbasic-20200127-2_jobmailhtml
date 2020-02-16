@@ -1,3 +1,42 @@
-td {
-    border: 1px solid black;
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.result {
+  margin-bottom: 30px;
+}
+
+.example table,
+.result table {
+  border-collapse: collapse;
+}
+
+.result thead td {
+  font-weight: bold;
+  background: #dcdcdc;
+}
+
+.example td,
+.result th,
+.result td {
+  padding: 10px 15px;
+  border: 1px solid #000;
+}
+
+button {
+  padding: 10px 25px;
+  background: #dcdcdc;
+  border-radius: 10px;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  outline: none;
+}
+
+button:active {
+  opacity: 0.5;
 }
