@@ -65,7 +65,7 @@ const product = {
             </div>
             <p class="card-text price-text discount"><strong>€ 129.92</strong>
             <small class="ml-2">€ 250</small></p>
-            
+
             <button class="product-add-to-cart" data-button-role="add-to-cart">
               Add to cart
             </button>
@@ -100,7 +100,7 @@ const product = {
 <div class="row justify-content-end">
     <div class="col-lg-9">
         <h3 class="section-title">
-          Top Recommendations For You | 
+          Top Recommendations For You |
           <a href="/checkout.html">Your Cart</a>
         </h3>
         <div class="row homepage-cards">
@@ -136,10 +136,10 @@ const product = {
 
 !!! Ключ, который нужно использовать для хранения - `'cart-products'`
 
-У каждого товара есть кнопка для добавления в корзину (`Add to cart`). 
+У каждого товара есть кнопка для добавления в корзину (`Add to cart`).
 В этом пункте вы реализуете процесс добавления.
 
-- Т.к. товаров в корзине может быть любое количество, 
+- Т.к. товаров в корзине может быть любое количество,
 рекомендуется использовать прием [Делегирование событий](http://learn.javascript.ru/event-delegation);
 Т.е. навесить только один обработчик на родительский элемент, который мы передаем как параметр
   - `data-button-role="add-to-cart"` - дата-атрибут на кнопке добавления
@@ -150,4 +150,3 @@ const product = {
 - Каждая карточка товара имеет класс `products-list-product`
 - Обратите внимание, т.к. в `localStorage` все хранится как строка, то при добавлении товара, вам нужно полностью перезаписать весь список
 - Также нужно учесть ситуацию, когда мы пытаемся добавить товар, который и так уже в корзине, и не добавлять его.
-  
