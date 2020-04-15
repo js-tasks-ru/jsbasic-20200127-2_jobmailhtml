@@ -9,7 +9,7 @@ class CheckoutProductList {
     this.parseData();
 
     // added event for button
-    this._btn = document.querySelector('.product-list-box-wrapper');
+    this._btn = this.el.querySelector('.product-list-box');
     this._btn.addEventListener('click', event => this.clickBtnDelete(event));
   }
 
@@ -49,33 +49,32 @@ class CheckoutProductList {
       }
 
       let templateForRow = `
-        <div class="product-list-box">
-          <div data-product-id="${item.id}" class="product-wrapper box-inner-col description-col">
-
+         <div data-product-id="${item.id}" class="product-wrapper box-inner-col description-col">
             <div class="product-image-container">
               <img class="product-image" src="${item.imageUrl}" alt="img">
             </div>
-
+  
             <div class="product-description">
               <h4 class="col-title mb-2">${item.title}</h4>
-
+  
               ${templateRate}
             </div>
-
+  
             <div class="product-price">
               <p class="mb-0 font-weight-light">Price:</p>
               <h4 class="col-title price-text mb-2">${item.price}</h4>
             </div>
-
+  
             <div class="product-remove-button-wrapper">
 
             </div>
-          </div>
-        </div>
+         </div>
       `;
 
       orderTable += templateForRow;
     }
+
+    orderTable = `<div class="product-list-box">${orderTable}</div>`;
 
     this.el.insertAdjacentHTML(`afterBegin`, orderTable);
 
@@ -126,7 +125,6 @@ class CheckoutProductList {
   clickBtnDelete(event) {
     let storageIdNew;
     let target = event.target;
-    let product = target.closest('.product-list-box');
     let productWrapper = target.closest('.product-wrapper');
 
     if (target.hasAttribute("data-button-role")) {
@@ -135,7 +133,7 @@ class CheckoutProductList {
       if(confirmDelete) {
         storageIdNew = +productWrapper.getAttribute("data-product-id");
 
-        product.remove();
+        productWrapper.remove();
 
         let itemsArrayNew = JSON.parse(localStorage.getItem(this.productsStoreKey));
 
